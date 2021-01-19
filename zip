@@ -1,0 +1,44 @@
+# Zip Program 
+zip
+gzip
+gz
+bz2
+xz
+
+# Tar Program
+tar
+tar.gz
+tar.bz2
+tar.xz
+
+--	--	--
+gzip -c compress to screen
+gzip -d dis compress
+gzip -t check *.gz is ok
+gzip -v informaiton // only to origin file
+gzip -# compress level
+gzip -k keep source file
+gzip -l show the compress information
+
+bzip2 bzcat ...
+xz xzcat ...
+
+--	--	--
+
+tar -c create
+tar -t tree the files
+tar -x decompress
+tar -z use gzip
+tar -j use bzip2
+tar -J use xz
+tar -v show information
+tar -f filename the file to do
+tar -C use in decompress
+
+tar -p keep property
+tar -P keep route
+--exclude=FILE don't tar FILE
+
+
+
+
