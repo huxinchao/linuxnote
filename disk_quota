@@ -1,0 +1,36 @@
+# already alias xquota='xfs_quota -x -c' , easy to use .
+
+1: xquota 'report' 'state' 'print'
+
+report -u/g/p	: the block,inode limit of user (group) (project)
+
+report -state	: show the on/off about the disk's xfs information
+
+print		: show the projects of disk
+
+2: xquota 'limit'
+
+'limit -u/g/p bsoft=xxxM bhard=xxxM username/groupname/proname' /disk
+
+3: xquota 'timer'
+
+'timer -u/g/p -b/i Xdays' /disk
+
+4: xquota project
+	1: echo '1:/disk/dire' >> /etc/projects
+	2: echo 'proname:1'    >> /etc/projid
+	3: xquota 'project -s proname'
+
+5:quota disable/enable off/remove
+
+disable: turn off the quota system, although the system still calculate,just don't control it
+enbale : turn on the quota function 
+off    : really turn off the quota system 
+remove : must run in the 'off' status (must off all the part(u,g,p))
+
+
+disable -ugp
+enable -ugp
+off -ugp
+remove -u
+
