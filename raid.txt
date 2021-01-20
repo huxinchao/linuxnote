@@ -31,4 +31,10 @@ Volume		n	1	n/2	n-1	n-2
 App		Speed	Backup  Server	Backup	Backup
 
 mdadm --create /dev/md0 --auto=yes --level=0 --chunk=256K --raid-devices=2 --spare-devices=1 /dev/sda{5,6}
+mdadm --manage /dev/md0 --fail /dev/sda*  : set a failure disk, then the system will auto rebuild
+mdadm --manage /dev/md0 --remove /dev/sda*
+[reboot...]
+mdadm --manage /dev/md0 --add /dev/sda*
+
+
 
