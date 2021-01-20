@@ -2,6 +2,7 @@ RAID: Redundant Arrays of Inexpensive Didk
 raid0: 2 * speed of read/write
 raid1: 0.5 * speed of read/write, hava backup
 raid0+1:
+
 		|
 	      raid0
 	/--------------\
