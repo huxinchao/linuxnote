@@ -30,4 +30,5 @@ Read		n	n	n	<n-1	<n-2
 Volume		n	1	n/2	n-1	n-2
 App		Speed	Backup  Server	Backup	Backup
 
+mdadm --create /dev/md0 --auto=yes --level=0 --chunk=256K --raid-devices=2 --spare-devices=1 /dev/sda{5,6}
 
