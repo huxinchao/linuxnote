@@ -1,0 +1,33 @@
+RAID: Redundant Arrays of Inexpensive Didk
+raid0: 2 * speed of read/write
+raid1: 0.5 * speed of read/write, hava backup
+raid0+1:
+		|
+	      raid0
+	/--------------\
+       raid1           raid1
+        |		|
+       /--\            /--\
+      []  []          []  []
+raid5: at least 3 disks
+
+[data] ----- Parity ----->
+	                 |
+         /---------------|---------------\
+        A0              B0               Parity0
+        A1              Parity1          C1
+        Parity2         B2               C2
+        A3              B3               Parity3
+
+Spare Disk: Prepare for RAID SYSTEM's accident
+
+Project		Raid0	Raid1	Raid10	 Raid5	 Raid6
+Least Disk	2	2	4	 3	 4
+MaxRadDisk	No	n-1	n/2	 1	 2
+Security	No	Best	Best	Good	>Raid5
+Wirte		n	1	n/2	<n-1	<n-2
+Read		n	n	n	<n-1	<n-2
+Volume		n	1	n/2	n-1	n-2
+App		Speed	Backup  Server	Backup	Backup
+
+

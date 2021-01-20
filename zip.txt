@@ -39,6 +39,9 @@ tar -p keep property
 tar -P keep route
 --exclude=FILE don't tar FILE
 
+find file | cpio -ocvB > *.cpio
+cpio -idvc < *.cpio
+
 
 
 
