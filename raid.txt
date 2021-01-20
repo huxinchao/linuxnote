@@ -36,5 +36,13 @@ mdadm --manage /dev/md0 --remove /dev/sda*
 [reboot...]
 mdadm --manage /dev/md0 --add /dev/sda*
 
+mdadm --detail /dev/md0 | grep -i uuid
+vim /etc/mdadm.conf 
+	ARRAY /dev/md0 UUID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+blkid/dev/md0 Get Really UUID
+
+
+
 
 
