@@ -15,3 +15,15 @@ PE Physical Extent (such as block) (default 4MB size)
 
 gdisk -l /dev/sda : show disk table
 
+PV: pvcreate /dev/sda{x1,x2} pvscan pvdisplay
+
+VG: vgcreate vgscan vgdisplay | vgextend, vgreduce, vgchange, vgremove
+vgcreate -s PE's size name /dev/sda{x1,x2}
+vgreduce name /dev/sda*
+
+
+LV: lvcreate lvscan lvdisplay lvextend lvreduce lvremove lvresize
+
+
+
+
