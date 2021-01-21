@@ -1,0 +1,17 @@
+LVM-PV
+PV Physical Volume
+Need to change partition's systemID to '8e'(LVM's flag), then use 'pvcrate' to let it be LVM's basic PV.
+
+VG Volume Group
+many PV is a VG
+
+PE Physical Extent (such as block) (default 4MB size)
+
+		  VG
+|-------------------|
+|[PE] [PE] [PE] [PE]|
+|[PE] [PE] [PE] [PE]|	
+|-------------------|
+
+gdisk -l /dev/sda : show disk table
+
