@@ -23,9 +23,19 @@ vgreduce name /dev/sda*
 
 
 LV: lvcreate lvscan lvdisplay lvextend lvreduce lvremove lvresize
+lvcreate -L xG -n test_lv test_vg
 
 lvresize --size +/-100M /dev/test_vg/test_lv
+
 [XFS Filesystem]
 xfs_info /dev -> xfs_growfs /dev
+
+[LVM thin Volume]
+
+1:lvcreate -L 1G -T test_vg/test_pool	; create the pool
+2:lvs		; show the pool
+3:lvcreate -V 10G -T test_vg/test_pool -n test_thin
+
+
 
 
