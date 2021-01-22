@@ -24,6 +24,8 @@ vgreduce name /dev/sda*
 
 LV: lvcreate lvscan lvdisplay lvextend lvreduce lvremove lvresize
 
-
+lvresize --size +/-100M /dev/test_vg/test_lv
+[XFS Filesystem]
+xfs_info /dev -> xfs_growfs /dev
 
 
