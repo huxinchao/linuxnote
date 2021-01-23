@@ -29,6 +29,45 @@ usually only define a GDT, but every process if need itself's segment, it will c
 GDT's location and size storaged in [GDTR Control Register]
 LDT's location and size storaged in [LDTR Control Register]
 
+Segment Name 			Descripe
+Base				first byte's linear address
+
+G				particles's flag 0:4096
+
+Limit				last byte's offset
+
+S				System Flag, 0:system segment,storage LDT or something else, or it's 
+				a normal code segment or data segment
+
+Type				segment's type and r/w privilege
+
+DPL   				Descriptor Privilege Level:for the limit
+				0: Cpu can access
+				3: Anyone can access
+
+P				Segment Present 
+				0:Don's exists in memory(maybe in disk)
+				1:in memory
+D/B				Data segment or Code Segemtn
+AVL Flag			Can be used by OS, but ignore by Linux
+
+----- ----- -----
+Type
+
+1: Code Segment Descriptor , can in GDT or LDT
+2: Data Segment Descriptor , can in GDT or LDT
+3: TSSD (Task Status Segment Descriptor), save registers's data, only in GDT
+it's Type Segemnt's value can be set 11 or 9 depend on it's running on CPU
+
+|63-Base-56|55-G-55|54-B-54|53-O-53|52-AVL-52|51-LIMIT-48|47-1-47|46-DPL-45|43-TYPE-40|39-BASE-32|
+|31------------------BASE----------------------16|15----------------LIMIT-----------------------0|
+
+LDTD means this segment descriptor include a LDT's segment, only appear in GDT.
+it's Type segment will be set to 2, S will be set to 0.
+
+
+
+
 
 
 
