@@ -1,0 +1,38 @@
+1:Memory
+
+1.1 Memory Address
+----- ----- -----
+Logical Address (segment, offset)
+Linear Address (Virtual address)
+Physical Address(CPU --[bus addr]--> mem)
+
+Logical Address ->[ Segment Part] -> Linear Address -> [Page Part] --> Logical Address
+
+in the mutli cpu's computer, will have a 'Memory Arbiter' in between bus and memory's core
+in the single cpu's computer, because of DMA, it also need 'Memory Arbiter'
+
+[Segment Part] have 'Real Mode' and 'Protected Mode' (usually 'Protected Mode')
+
+----- ----- ----- 
+
+'Segment Part' have to part : Segment Selector and offset
+Segement Selector's organization: [15-Index-3][2-Table Indicator-2][1-Request Privilege Level-0]
+
+RPL = Current Privilege Level ;; 0 -> 3 High->Low
+
+----- ----- -----
+
+Segement Descriptor
+
+Segment Descriptor in GDT(Global Descriptor Table) or LDT(Local Descriptor Table)
+usually only define a GDT, but every process if need itself's segment, it will create a GDT.
+GDT's location and size storaged in [GDTR Control Register]
+LDT's location and size storaged in [LDTR Control Register]
+
+
+
+
+
+
+
+
