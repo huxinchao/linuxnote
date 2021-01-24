@@ -46,3 +46,11 @@ pvremove	vgremove	lvremove	umount,format
 				lvresize	xfs_growfs	resize2fs
 pvchange	vgchange	lvchange	/etc/fstab
 ----------------------------------------------------------------
+
+umount /lvmdisk /lvmdisk_snap
+lvs vgname
+lvremove ...
+vgachange --a n vgname
+vgremove vgname
+pvremove ...
+
