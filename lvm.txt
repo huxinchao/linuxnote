@@ -35,7 +35,14 @@ xfs_info /dev -> xfs_growfs /dev
 1:lvcreate -L 1G -T test_vg/test_pool	; create the pool
 2:lvs		; show the pool
 3:lvcreate -V 10G -T test_vg/test_pool -n test_thin
+---------------------------------------------------------------
 
-
-
-
+pvscan		vgscan		lvscan		lsblk,blkid
+pvcreate	vgcreate	lvcreate	mkfs.xfs, mkfs.ext4
+pvdisplay	vgdisplay	lvdisplay	df,mount
+		vgextend	lvresize	xfs_growfs	resize2fs
+		vgreduce	lvresize	X		resize2fs
+pvremove	vgremove	lvremove	umount,format
+				lvresize	xfs_growfs	resize2fs
+pvchange	vgchange	lvchange	/etc/fstab
+----------------------------------------------------------------
