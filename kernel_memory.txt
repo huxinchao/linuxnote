@@ -65,6 +65,23 @@ it's Type Segemnt's value can be set 11 or 9 depend on it's running on CPU
 LDTD means this segment descriptor include a LDT's segment, only appear in GDT.
 it's Type segment will be set to 2, S will be set to 0.
 
+----- ----- -----
+
+Fast Access Segment Descriptor
+
+For speed up the Logic Address to Linear Address, 80x86 CPU provide extend no-program registers work 
+for normal register to use
+When a Segment Selector in to register , the revelant Segment Descriptor in to the no-program register 
+too !
+only when the content change, it's need to access GDT or LDT.
+
+Segment Selector's content
+
+index			the entry of segment descriptor in the GDT or LDT
+TI(Table Indictor)	In GDT(0) or LDT(1)
+PRI			set the cpu's privilege(such as access the data segment)
+
+
 
 
 

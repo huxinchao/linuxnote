@@ -1,0 +1,25 @@
+/etc/corn.allow [only user in this can]
+/etc/cron.deny  [only user in this can't]
+
+/var/spool/cron/username	work storage
+/var/log/cron			log
+
+
+crontab -e edit
+	-l list
+	-r remove
+
+if only delete one of works, use -e to edit file
+
+
++--------------------------------------------+
+|Minutes  Hours  Days  Months  Weeks  Command|
+| 0-59     0-23  1-31   1-12    0-7          |
++--------------------------------------------+
+
+*		Every Time
+,		0 3,6 * * * command   In 3:00 and 6:00 excute command
+-		20 8-12 * * * command  During 8:00-12:00 , in the 20:00 to excute
+/n              */n * * * * command Every 5 minutes to excuted it
+
+
