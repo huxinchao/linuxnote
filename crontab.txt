@@ -22,4 +22,10 @@ if only delete one of works, use -e to edit file
 -		20 8-12 * * * command  During 8:00-12:00 , in the 20:00 to excute
 /n              */n * * * * command Every 5 minutes to excuted it
 
+crontab -e userself's profile
+/etc/crontab system administrator's profile
+software use /etc/cron.d/newfile
+/etc/cron.hourly(weekly...) must be a shell script
+
+
 
