@@ -1,0 +1,13 @@
+timedatectl set-ntp true
+
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+----- ----- ----- enough...
+
+pacman -S openntpd
+systemctl restart openntpd
+systemctl enable openntpd
+
+
+
+
