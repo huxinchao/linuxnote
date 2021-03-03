@@ -1,0 +1,45 @@
+cut -d (divide) -f 3,5 (the 3rd and 5th files)
+
+grep -a(binary file as ascii files to search)
+grep -c (count the results)
+grep -i (ignore aA)
+grep -n (line Number)
+grep -v (reverse)
+
+sort -i (ignore aA)
+sort -b (ignore the begin blank)
+sort -M (sort as Month)
+sort -n (sort as Number)
+sort -r (sort reverse)
+sort -u (unique)
+sort -t (divude character,default 'tab')
+sort -k (key)
+
+wc -l lines
+wc -w how many words
+wc -m how many charters
+
+cat /etc/passwd | tee tmp | cut -d ':' -f 1
+
+uniq -c count
+uniq -i ignore the aA
+
+tr -d (delete character)
+tr -s (delete duplicate character)
+
+col -x (tab to space)
+
+join -t ':' -1 4 /etc/passwd -2 3 /etc/shadow
+
+paste -d (divide) 
+
+split -b blocksize /etc/tmp TMPSP_
+
+xargs -n (number of one time excute)
+
+----- ----- -----
+NF: one line's total number
+NR: the line in the file
+FS: Divide Character
+
+
