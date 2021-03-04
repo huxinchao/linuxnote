@@ -81,6 +81,11 @@ index			the entry of segment descriptor in the GDT or LDT
 TI(Table Indictor)	In GDT(0) or LDT(1)
 PRI			set the cpu's privilege(such as access the data segment)
 
+--- --- ---
+
+Segment have 3 privilege, page only have 2 ... read / write , segment have excute
+
+
 
 
 
