@@ -1,0 +1,6 @@
+pacman -S mariadb mariadb-clients
+mysql_install_db --user=mysql --basedir=/usr --datedir/var/lib/mysql
+systemctl start mysqld
+mysqladmin -u root password 'qwer'
+mysql -u root -p qwer
+
