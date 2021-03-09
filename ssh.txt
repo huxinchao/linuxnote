@@ -1,0 +1,42 @@
+1: Normal No-Equal Encrypt
+#Client                    #Server
+
+PUB_KEY		<-          PUB_KEY, PRI_KEY
+
+[username,password]:PUB_KEY -> e_data   e_data->PRI_KEY->[username,password] Authroize
+
+Result          <-          Result
+
+2: SSH
+
+Depend On Password
+
+use PUB_KEY to generate a Finger .
+
+#Client        <- Finger           #Server
+
+#Client choose believe Finger Y/N
+
+2: Depend On PUB_KEY
+
+#Client		                   #Server
+PUB_KEY  -----Add it Maunal-->    authorized keys(PUB_KEY)
+
+PRI_KEY   ---Login Request-->     Rand a num, num:PUB_KEY edata
+
+get rand num, (num + sessionKey) md5 -> Digit  -----> (num + sessionKey) md5
+
+----------------------------------------------------------------
+
+Server [ authorized_keys ]
+
+Client [ known_hosts ]
+Every SSH-Server have a secret, unique ID, called host key
+first login, will add server's id to known_hosts .
+
+
+
+
+
+
+
