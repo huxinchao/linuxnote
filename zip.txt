@@ -42,7 +42,3 @@ tar -P keep route
 
 find file | cpio -ocvB > *.cpio
 cpio -idvc < *.cpio
-
-
-
-

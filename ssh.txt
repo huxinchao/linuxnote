@@ -33,10 +33,3 @@ Server [ authorized_keys ]
 Client [ known_hosts ]
 Every SSH-Server have a secret, unique ID, called host key
 first login, will add server's id to known_hosts .
-
-
-
-
-
-
-
