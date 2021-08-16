@@ -1,0 +1,2 @@
+patch -p(0-n) /dirA/dirB/...   ;; remove 0-n '/' < pathfile
+
