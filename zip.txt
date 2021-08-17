@@ -35,6 +35,8 @@ tar -v show information
 tar -f filename the file to do
 tar -C use in decompress
 tar -zcvf filename -C target/ . (only tar directory's files)
+tar -zxvf x.tar.gz --directory=/target/dir
+
 
 tar -p keep property
 tar -P keep route
