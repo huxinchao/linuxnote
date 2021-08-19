@@ -26,6 +26,3 @@ crontab -e userself's profile
 /etc/crontab system administrator's profile
 software use /etc/cron.d/newfile
 /etc/cron.hourly(weekly...) must be a shell script
-
-
-
