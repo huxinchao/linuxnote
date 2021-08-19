@@ -7,7 +7,3 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 pacman -S openntpd
 systemctl restart openntpd
 systemctl enable openntpd
-
-
-
-
