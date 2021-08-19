@@ -52,10 +52,3 @@ dd if=/dev/zero of=/dev/md0 bs=1M count=50 // rewrite RAID's metadata and superb
 mdadm --stop /dev/md0
 dd if=/dev/zero of=/dev/sd* bs=1M count=50
 del info in /etc/mdadm.conf
-
-
-
-
-
-
-
