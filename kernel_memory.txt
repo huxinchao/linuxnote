@@ -84,16 +84,3 @@ PRI			set the cpu's privilege(such as access the data segment)
 --- --- ---
 
 Segment have 3 privilege, page only have 2 ... read / write , segment have excute
-
-
-
-
-
-
-
-
-
-
-
-
-
