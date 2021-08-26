@@ -12,7 +12,7 @@
  )
 
 (setq make-backup-files nil) ;; it's correct.
-(global-linum-mode 1)
+(global-linum-mode 1) ;; work
 
     (setq tab-width 4)
     (setq default-tab-width 4)
@@ -35,4 +35,13 @@
                  (setq tab-width 4)
                  (setq indent-tabs-mode t)
                  (setq c-basic-offset 4)))
+
+(electric-pair-mode 1)
+(setq electric-pair-pairs
+      '(
+	(?\" . ?\")
+	(?\{ . ?\})
+	(?\' . ?\')))
+
+
 
