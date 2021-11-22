@@ -4,3 +4,5 @@ systemctl start mysqld
 mysqladmin -u root password 'qwer'
 mysql -u root -p qwer
 
+alter user 'root'@'%' identified with mysql_native_password by '123456';
+

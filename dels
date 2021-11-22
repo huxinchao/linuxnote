@@ -1,0 +1,15 @@
+#!/bin/bash
+files=$(ls | grep 'xunlei')
+count=0
+for fname in ${files}
+do
+    rm ${fname}
+    count=$(($count+1))
+    if [ $count == 10000 ]; then
+	echo "[*] processing 10000, wait ...";
+	count=0;
+    fi
+done
+echo "final: ${count}"
+
+
