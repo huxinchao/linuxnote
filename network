@@ -17,3 +17,5 @@ nameserver 8.8.8.8
 
 route add default gw x.x.x.x
 
+apt install net-tools
+
