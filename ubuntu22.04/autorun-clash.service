@@ -1,0 +1,9 @@
+[Unit]
+Description=My Program
+
+[Service]
+ExecStart=/etc/systemd/system/autorun.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
