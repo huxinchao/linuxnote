@@ -5,3 +5,5 @@ export LD_LIBRARY_PATH=./
 g++ -std=c++11 -fPIC -shared fun.cpp -o fun.so
 g++ -std=c++11 -fPic -c fun.cpp -o fun.o
 ar -cr fun.a fun.o
+
+
